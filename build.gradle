@@ -1,0 +1,40 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+//全局配置版本信息，sdk名字等
+ext{
+    //compile
+    compileSdkVersion = 28
+    minSdkVersion = 28
+    targetSdkVersion = 28
+
+    //version
+    sdkVersionCode = 1
+    versionName = '1.0.0'
+
+    //sdkName
+    sdkPrefixName = 'huaweiCameraKit_v'
+    sdkSuffixName = '.aar'
+    sdkName = sdkPrefixName+versionName+sdkSuffixName
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
