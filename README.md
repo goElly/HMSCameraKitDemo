@@ -1,1 +1,1 @@
-Hello CameraKitDemo
+CameraKitDemo
